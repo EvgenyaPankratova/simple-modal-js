@@ -13,10 +13,12 @@
         Частные презентации модных коллекций и лимитированных капсульных
         коллекций по предварительной записи.
       </div>
-      <button class="containerButton">Записаться на примерку</button>
+      <button type="button" class="containerButton">
+        Записаться на примерку
+      </button>
     </article>
 
-    <dialog class="modal">
+    <dialog class="modal" aria-modal="true" role="dialog">
       <div class="modal_wrapper">
         <div class="modal_private">Private Event</div>
         <h2 class="modal_title">Подтвердить бронирование?</h2>
@@ -32,8 +34,8 @@
           <div class="modal_info_guests">2 гостя</div>
         </div>
         <div class="modal_buttons">
-          <button class="modalButton">Позже</button>
-          <button class="modalButton">Подтвердить</button>
+          <button type="button" class="modalButton">Позже</button>
+          <button type="button" class="modalButton">Подтвердить</button>
         </div>
 
         <button class="modalButton close_button">
