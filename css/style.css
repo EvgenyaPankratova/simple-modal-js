@@ -1,0 +1,198 @@
+* {
+  padding: 0;
+  margin: 0;
+  border: none;
+}
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+body {
+  background: rgba(31, 20, 37, 1);
+  color: rgba(214, 203, 195, 1);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-family: "GolosRegular";
+  font-size: 16px;
+  height: 100vh;
+}
+
+.card {
+  background: rgba(255, 255, 255, 0.03);
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  border-radius: 32px;
+  max-width: 780px;
+  padding: 56px;
+  position: relative;
+}
+
+.card_title {
+  font-family: "CormonantBold";
+  font-size: 64px;
+  margin-bottom: 16px;
+  color: rgba(247, 239, 231, 1);
+}
+
+.card_description {
+  font-size: 16px;
+  color: rgba(214, 203, 195, 1);
+}
+
+.containerButton {
+  border: 1px solid rgba(255, 255, 255, 0.35);
+  background: rgba(255, 255, 255, 0.06);
+  padding: 16px 32px;
+  border-radius: 100px;
+  font-size: inherit;
+  margin-top: 32px;
+  cursor: pointer;
+  color: rgba(214, 203, 195, 1);
+}
+
+.containerButton:hover {
+  background: rgba(255, 255, 255, 0.2);
+}
+
+.modal {
+  margin: auto;
+  padding: 32px;
+  border: 1px solid rgba(255, 255, 255, 0.28);
+  background: rgba(255, 245, 236, 0.14);
+  backdrop-filter: blur(32px);
+  border-radius: 32px;
+  color: inherit;
+  max-width: 540px;
+
+  &::backdrop {
+    background: rgba(10, 8, 12, 0.42);
+  }
+}
+
+.modal_wrapper {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+.modal_private {
+  text-transform: uppercase;
+  color: rgba(243, 210, 178, 1);
+  font-size: 12px;
+  letter-spacing: 12%;
+}
+
+.modal_title {
+  font-family: "CormonantBold";
+  font-size: 44px;
+  color: rgba(255, 248, 242, 1);
+}
+
+.modal_info {
+  border: 1px solid rgba(255, 255, 255, 0.16);
+  background: rgba(255, 255, 255, 0.08);
+  display: flex;
+  justify-content: space-between;
+  padding: 16px;
+  border-radius: 20px;
+  color: rgba(255, 248, 242, 1);
+}
+
+.modal_info_content_name {
+  font-family: "GolosBold";
+  margin-bottom: 4px;
+}
+.modal_info_content_date {
+  color: rgba(255, 255, 255, 0.75);
+  font-size: 12px;
+}
+.modal_info_guests {
+  font-family: "GolosBold";
+}
+
+.modal_buttons {
+  display: flex;
+  gap: 12px;
+}
+
+.modalButton {
+  padding: 16px;
+  border-radius: 16px;
+  width: 100%;
+  background: rgba(255, 255, 255, 0.12);
+  font-family: "GolosBold";
+  font-size: 16px;
+  cursor: pointer;
+}
+
+.modalButton:first-child {
+  color: rgba(255, 255, 255, 1);
+  &:hover {
+    background: rgba(255, 255, 255, 0.3);
+  }
+}
+
+.modalButton:nth-child(2) {
+  background: rgba(243, 210, 178, 1);
+  &:hover {
+    background: rgba(243, 210, 178, 0.9);
+  }
+}
+
+.close_button {
+  position: absolute;
+  right: 20px;
+  top: 20px;
+  width: fit-content;
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  border-radius: 100px;
+  padding: 8px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  &:hover {
+    background: rgba(255, 255, 255, 0.3);
+  }
+}
+
+@font-face {
+  font-family: "CormonantBold";
+  src: url("../fonts/CormorantGaramondBold.woff2") format("woff2");
+  font-weight: 700;
+  font-style: bold;
+}
+@font-face {
+  font-family: "GolosBold";
+  src: url("../fonts/GolosTextBold.woff2") format("woff2");
+  font-weight: 700;
+  font-style: bold;
+}
+@font-face {
+  font-family: "GolosRegular";
+  src: url("../fonts/GolosTextRegular.woff2") format("woff2");
+  font-weight: 400;
+  font-style: normal;
+}
+
+@media (max-width: 768px) {
+  body {
+    padding-top: 40px;
+    flex-direction: column;
+    justify-content: start;
+  }
+  .card {
+    max-width: 90%;
+    padding: 32px;
+  }
+  .card_title {
+    font-size: 44px;
+  }
+  .modal {
+    max-width: 90%;
+    margin-top: 120px;
+  }
+  .modal_buttons {
+    flex-direction: column;
+  }
+}

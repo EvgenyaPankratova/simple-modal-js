@@ -1,0 +1,47 @@
+<!doctype html>
+<html lang="ru">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="stylesheet" href="css/style.css" />
+  </head>
+  <body>
+    <article class="card">
+      <div class="card_title">Atelier No. 9</div>
+      <div class="card_description">
+        Частные презентации модных коллекций и лимитированных капсульных
+        коллекций по предварительной записи.
+      </div>
+      <button class="containerButton">Записаться на примерку</button>
+    </article>
+
+    <dialog class="modal">
+      <div class="modal_wrapper">
+        <div class="modal_private">Private Event</div>
+        <h2 class="modal_title">Подтвердить бронирование?</h2>
+        <p class="modal_desc">
+          Место будет закреплено на 20 минут. После подтверждения приглашение
+          и QR-пропуск появятся в личном кабинете.
+        </p>
+        <div class="modal_info">
+          <div class="modal_info_content">
+            <div class="modal_info_content_name">Evening Preview</div>
+            <div class="modal_info_content_date">28 июля · 19:30</div>
+          </div>
+          <div class="modal_info_guests">2 гостя</div>
+        </div>
+        <div class="modal_buttons">
+          <button class="modalButton">Позже</button>
+          <button class="modalButton">Подтвердить</button>
+        </div>
+
+        <button class="modalButton close_button">
+          <img src="/img/icon.svg" />
+        </button>
+      </div>
+    </dialog>
+
+    <script src="js/script.js" defer></script>
+  </body>
+</html>
